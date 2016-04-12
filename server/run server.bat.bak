@@ -1,0 +1,1 @@
+cmd /k "java -jar target/devops.server-1.0-SNAPSHOT.jar server server\src\main\resources\devops-server-configuration.yml"
