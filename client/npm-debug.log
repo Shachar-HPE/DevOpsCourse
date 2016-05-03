@@ -1,7 +1,8 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
+1 verbose cli   'run',
+1 verbose cli   'test-single-run' ]
 2 info using npm@1.4.29
 3 info using node@v0.10.41
 4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
@@ -20,24 +21,27 @@
 17 warn deprecated will be bundled with a version of npm@2, which has some small
 18 warn deprecated backwards-incompatible changes made to `npm run-script` and
 19 warn deprecated semver behavior.
-20 verbose run-script [ 'prestart', 'start', 'poststart' ]
-21 info prestart devops-hpe-tasklist@0.0.0
-22 verbose unsafe-perm in lifecycle true
-23 info devops-hpe-tasklist@0.0.0 Failed to exec prestart script
-24 error devops-hpe-tasklist@0.0.0 prestart: `npm install`
-24 error Exit status 1
-25 error Failed at the devops-hpe-tasklist@0.0.0 prestart script.
-25 error This is most likely a problem with the devops-hpe-tasklist package,
-25 error not with npm itself.
-25 error Tell the author that this fails on your system:
-25 error     npm install
-25 error You can get their info via:
-25 error     npm owner ls devops-hpe-tasklist
-25 error There is likely additional logging output above.
-26 error System Windows_NT 6.1.7601
-27 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-28 error cwd C:\DevOpsCource1\client
-29 error node -v v0.10.41
-30 error npm -v 1.4.29
-31 error code ELIFECYCLE
-32 verbose exit [ 1, true ]
+20 verbose run-script [ 'pretest-single-run',
+20 verbose run-script   'test-single-run',
+20 verbose run-script   'posttest-single-run' ]
+21 info pretest-single-run devopscourse@0.0.0
+22 info test-single-run devopscourse@0.0.0
+23 verbose unsafe-perm in lifecycle true
+24 info devopscourse@0.0.0 Failed to exec test-single-run script
+25 error devopscourse@0.0.0 test-single-run: `node node_modules/karma/bin/karma start test/karma.conf.js  --single-run`
+25 error Exit status 1
+26 error Failed at the devopscourse@0.0.0 test-single-run script.
+26 error This is most likely a problem with the devopscourse package,
+26 error not with npm itself.
+26 error Tell the author that this fails on your system:
+26 error     node node_modules/karma/bin/karma start test/karma.conf.js  --single-run
+26 error You can get their info via:
+26 error     npm owner ls devopscourse
+26 error There is likely additional logging output above.
+27 error System Windows_NT 6.1.7601
+28 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "test-single-run"
+29 error cwd C:\DevOpsCource1\client
+30 error node -v v0.10.41
+31 error npm -v 1.4.29
+32 error code ELIFECYCLE
+33 verbose exit [ 1, true ]

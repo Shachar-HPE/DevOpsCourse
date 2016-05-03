@@ -1,17 +1,18 @@
-var app = angular.module('plunker', []);
+var app = angular.module('DemoApp', []);
 
 app.controller('MainCtrl', function($scope, $http) {
   var count = 0;
-  var serverUrl = 'http://localhost:8000/tasks';
+  var serverUrl = '/tasks';
   $scope.name = 'User';
   $scope.tasks = [];
-  
-  (function() {
-    $http.get(serverUrl).then(function(result){
-		$scope.tasks=result.data;
-	});
-  })();
-  
+
+  $scope.getTask = function(id) {
+    getUrl = (id ? serverUrl+'/'+id : serverUrl);
+    $http.get(getUrl).then(function(result){
+      $scope.tasks=result.data;
+    });
+  }
+
   $scope.add = function() {
     addTask($scope.task);
     $scope.task = "";
@@ -29,4 +30,9 @@ app.controller('MainCtrl', function($scope, $http) {
 		$scope.tasks.push(result.data);
 	});
   };
+
+  (function() {
+    $scope.getTask();
+  })();
+
 });
